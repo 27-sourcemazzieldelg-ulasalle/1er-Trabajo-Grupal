@@ -18,3 +18,19 @@ tareas.append("Preparar el almuerzo")
 
 # Imprimo todas las tareas menos la primera que borre y se va a imprimir la tarea agregada.
 print(tareas)
+2. ejemplo acerca de cola
+ Creo una cola llamada proyecto que contiene los pasos del mismo
+proyecto = Cola()
+# Agregar las tareas a la cola paraa la completacion de mi proyecto
+proyecto.encolar("Planificación")
+proyecto.encolar("Diseño")
+proyecto.encolar("Desarrollo")
+proyecto.encolar("Pruebas")
+proyecto.encolar("Entrega")
+print("Estado inicial de la cola:")
+while not proyecto.esta_vacia():
+    print(proyecto.desencolar())
+
+# Agregar una nueva tarea y mostrarla
+proyecto.encolar("Mantenimiento")
+print("Nueva tarea agregada:", proyecto.ver_primero())
